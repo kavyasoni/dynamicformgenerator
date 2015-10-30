@@ -1,0 +1,201 @@
+{
+    "meta": {
+        "type": "meta",
+        "name": "Basic Info",
+        "group": "1"
+    },
+    "attributes": [
+        {
+            "type": "string",
+            "id": "0",
+            "default": "",
+            "priority": "0",
+            "label": "Name",
+            "hint": "",
+            "min_limit": "5",
+            "max_limit": "100",
+            "view_type": "0",
+            "value": "Kavya Soni"
+        },
+        {
+            "type": "email",
+            "id": "1",
+            "default": "",
+            "priority": "1",
+            "label": "Email",
+            "hint": "",
+            "min_limit": "0",
+            "max_limit": "0",
+            "view_type": "0",
+            "value": "kavya.soni@practo.com"
+        },
+        {
+            "type": "integer",
+            "id": "2",
+            "default": "",
+            "priority": "2",
+            "label": "Date",
+            "hint": "Example: 10/30/1999",
+            "min_limit": "10",
+            "max_limit": "10",
+            "view_type": "0",
+            "value": "10/30/1999"
+        },
+        {
+            "type": "drop_down",
+            "id": "3",
+            "default": "0",
+            "priority": "3",
+            "label": "Software",
+            "hint": "",
+            "min_limit": "0",
+            "max_limit": "1",
+            "view_type": "0",
+            "value": "10/30/1999",
+            "options": [
+                {
+                    "id": "0",
+                    "label": "Test"
+                },
+                {
+                    "id": "1",
+                    "label": "Test"
+                },
+                {
+                    "id": "2",
+                    "label": "Test"
+                },
+                {
+                    "id": "3",
+                    "label": "Test"
+                },
+                {
+                    "id": "4",
+                    "label": "Others"
+                }
+            ],
+            "toggles": {
+                "4": [
+                    {
+                        "type": "string",
+                        "id": "0",
+                        "default": "",
+                        "priority": "0",
+                        "label": "Name",
+                        "hint": "",
+                        "min_limit": "5",
+                        "max_limit": "100",
+                        "view_type": "0",
+                        "value": "Kavya Soni"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "check_box",
+            "id": "0",
+            "default": "0",
+            "priority": "4",
+            "label": "Guest Rooms",
+            "hint": "",
+            "min_limit": "0",
+            "max_limit": "1",
+            "view_type": "0",
+            "value": "1",
+            "toggles": {
+                "1": [
+                    {
+                        "type": "integer",
+                        "id": "0",
+                        "default": "",
+                        "priority": "0",
+                        "label": "Capacity",
+                        "hint": "",
+                        "min_limit": "1",
+                        "max_limit": "100",
+                        "view_type": "0",
+                        "value": "9"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "multi_select",
+            "id": "0",
+            "default": "0",
+            "priority": "4",
+            "label": "Guest Rooms",
+            "hint": "",
+            "min_limit": "0",
+            "max_limit": "1",
+            "view_type": "0",
+            "value": "1",
+            "attributes": [
+                {
+                    "type": "tag",
+                    "id": "0",
+                    "default": "0",
+                    "priority": "4",
+                    "label": "Guest Rooms",
+                    "hint": "",
+                    "min_limit": "0",
+                    "max_limit": "1",
+                    "view_type": "0",
+                    "value": "1"
+                },
+                {
+                    "type": "tag",
+                    "id": "1",
+                    "default": "0",
+                    "priority": "4",
+                    "label": "Guest Rooms",
+                    "hint": "",
+                    "min_limit": "0",
+                    "max_limit": "1",
+                    "view_type": "0",
+                    "value": "1"
+                },
+                {
+                    "type": "tag",
+                    "id": "2",
+                    "default": "0",
+                    "priority": "4",
+                    "label": "Guest Rooms",
+                    "hint": "",
+                    "min_limit": "0",
+                    "max_limit": "1",
+                    "view_type": "0",
+                    "value": "1"
+                },
+                {
+                    "type": "tag",
+                    "id": "3",
+                    "default": "0",
+                    "priority": "4",
+                    "label": "Others",
+                    "hint": "",
+                    "min_limit": "0",
+                    "max_limit": "1",
+                    "view_type": "0",
+                    "value": "1"
+                }
+            ],
+            "toggles": {
+                "4": [
+                    {
+                        "type": "integer",
+                        "id": "0",
+                        "default": "",
+                        "priority": "0",
+                        "label": "Capacity",
+                        "hint": "",
+                        "min_limit": "1",
+                        "max_limit": "100",
+                        "view_type": "0",
+                        "value": "9"
+                    }
+                ]
+            }
+        }
+    ]
+}

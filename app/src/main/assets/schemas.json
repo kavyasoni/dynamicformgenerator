@@ -1,0 +1,247 @@
+{
+    "meta": {
+        "type": "meta",
+        "name": "Basic Info",
+        "group": "1"
+    },
+    "attributes": [
+        {
+            "type": "name",
+            "id": "02342",
+            "priority": "0",
+            "label": "Name",
+            "hint": "",
+            "min_limit": "5",
+            "max_limit": "100",
+            "view_type": "0",
+            "value": "Kavya Soni"
+        },
+        {
+            "type": "integer",
+            "id": "023123",
+            "priority": "0",
+            "label": "Phone Number",
+            "hint": "Please enter the number",
+            "min_limit": "5",
+            "max_limit": "10",
+            "view_type": "0",
+            "value": "Kavya Soni"
+        },
+        {
+            "type": "email",
+            "id": "134534",
+            "priority": "1",
+            "label": "Email",
+            "hint": "",
+            "min_limit": "0",
+            "max_limit": "0",
+            "view_type": "0",
+            "value": "kavya.soni@practo.com"
+        },
+        {
+            "type": "date",
+            "id": "3452",
+            "priority": "2",
+            "label": "Date",
+            "hint": "Example: 10/30/1999",
+            "min_limit": "10",
+            "max_limit": "10",
+            "view_type": "0",
+            "value": "10/30/1999"
+        },
+        {
+            "type": "multi_select",
+            "id": "345333",
+            "default": "0",
+            "priority": "3",
+            "label": "Software",
+            "hint": "",
+            "min_limit": "0",
+            "max_limit": "1",
+            "view_type": "0",
+            "value": "10/30/1999",
+            "options": [
+                {
+                    "id": "0",
+                    "label": "Test"
+                },
+                {
+                    "id": "1",
+                    "label": "Test123"
+                },
+                {
+                    "id": "2",
+                    "label": "Test234"
+                },
+                {
+                    "id": "3",
+                    "label": "Test345"
+                },
+                {
+                    "id": "4",
+                    "label": "Others"
+                }
+            ],
+            "toggles": {
+                "4": [
+                    {
+                        "type": "integer",
+                        "id": "0",
+                        "default": "",
+                        "priority": "0",
+                        "label": "Capacity",
+                        "hint": "",
+                        "min_limit": "1",
+                        "max_limit": "100",
+                        "view_type": "0",
+                        "value": "9"
+                    },
+                    {
+                        "type": "multi_select",
+                        "id": "34533322",
+                        "default": "0",
+                        "priority": "3",
+                        "label": "Software",
+                        "hint": "",
+                        "min_limit": "0",
+                        "max_limit": "1",
+                        "view_type": "0",
+                        "value": "10/30/1999",
+                        "options": [
+                            {
+                                "id": "0",
+                                "label": "Test123"
+                            },
+                            {
+                                "id": "1",
+                                "label": "Test2354"
+                            },
+                            {
+                                "id": "2",
+                                "label": "Test123"
+                            },
+                            {
+                                "id": "3",
+                                "label": "Test"
+                            },
+                            {
+                                "id": "4",
+                                "label": "Others"
+                            },
+                            {
+                                "id": "5",
+                                "label": "Others123"
+                            },
+                            {
+                                "id": "6",
+                                "label": "Others234"
+                            },
+                            {
+                                "id": "4",
+                                "label": "Others355"
+                            },
+                            {
+                                "id": "4",
+                                "label": "Others123"
+                            }
+                        ],
+                        "toggles": {
+                            "4": [
+                                {
+                                    "type": "integer",
+                                    "id": "0",
+                                    "default": "",
+                                    "priority": "0",
+                                    "label": "Capacity",
+                                    "hint": "",
+                                    "min_limit": "1",
+                                    "max_limit": "100",
+                                    "view_type": "0",
+                                    "value": "9"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "check_box",
+            "id": "534534",
+            "default": "0",
+            "priority": "4",
+            "label": "Guest Rooms",
+            "hint": "",
+            "min_limit": "0",
+            "max_limit": "1",
+            "view_type": "0",
+            "value": "1",
+            "toggles": {
+                "4": [
+                    {
+                        "type": "integer",
+                        "id": "0",
+                        "default": "",
+                        "priority": "0",
+                        "label": "Capacity",
+                        "hint": "",
+                        "min_limit": "1",
+                        "max_limit": "100",
+                        "view_type": "0",
+                        "value": "9"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "multi_select",
+            "id": "0567568574",
+            "default": "0",
+            "priority": "4",
+            "label": "Select Softwares",
+            "hint": "",
+            "min_limit": "0",
+            "max_limit": "1",
+            "view_type": "0",
+            "value": "1",
+            "options": [
+                {
+                    "id": "0",
+                    "label": "Test"
+                },
+                {
+                    "id": "1",
+                    "label": "Test"
+                },
+                {
+                    "id": "2",
+                    "label": "Test"
+                },
+                {
+                    "id": "3",
+                    "label": "Test"
+                },
+                {
+                    "id": "4",
+                    "label": "Others"
+                }
+            ],
+            "toggles": {
+                "4": [
+                    {
+                        "type": "integer",
+                        "id": "0",
+                        "default": "",
+                        "priority": "0",
+                        "label": "Capacity",
+                        "hint": "",
+                        "min_limit": "1",
+                        "max_limit": "100",
+                        "view_type": "0",
+                        "value": "9"
+                    }
+                ]
+            }
+        }
+    ]
+}
