@@ -63,23 +63,28 @@
             "options": [
                 {
                     "id": "0",
-                    "label": "Test"
+                    "label": "Test",
+                    "value":"true"
                 },
                 {
                     "id": "1",
-                    "label": "Test123"
+                    "label": "Test123",
+                    "value":"false"
                 },
                 {
                     "id": "2",
-                    "label": "Test234"
+                    "label": "Test234",
+                    "value":"false"
                 },
                 {
                     "id": "3",
-                    "label": "Test345"
+                    "label": "Test345",
+                    "value":"true"
                 },
                 {
                     "id": "4",
-                    "label": "Others"
+                    "label": "Others",
+                    "value":"false"
                 }
             ],
             "toggles": {

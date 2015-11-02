@@ -1,67 +1,61 @@
 package com.example.kavyasoni.dynamicformgenerator;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import com.greenfrvr.hashtagview.HashtagView;
 
-import me.gujun.android.taggroup.TagGroup;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by kavyasoni on 28/10/15.
  */
 public class MultiSelectWidget extends BaseWidget {
-    protected transient TagGroup tagGroup;
-    protected transient Set<String> selectedTags;
+    protected transient HashtagView tagGroup;
     protected transient TextView labelTextView;
     protected transient LinearLayout rootViewLinearLayout;
 
     @Override
     public void initialiseView(Context context) {
         super.initialiseView(context, R.layout.multi_select_widget_layout);
-        selectedTags = new HashSet<>();
         rootViewLinearLayout = (LinearLayout) rootView.findViewById(R.id.rootViewLinearLayout);
         labelTextView = (TextView) rootView.findViewById(R.id.labelTextView);
         labelTextView.setText(getLabel());
-        tagGroup = (TagGroup) rootView.findViewById(R.id.tagGroup);
-        tagGroup.setTags(getTagOptions());
-        tagGroup.setOnTagClickListener(mTagClickListener);
+        List<Option> optionList = new ArrayList<>();
+        optionList.addAll(options);
+        tagGroup = (HashtagView) rootView.findViewById(R.id.tags);
+        tagGroup.setData(optionList, Transformers.TAG_ITEM_DATA_TRANSFORM, Selectors.TAG_ITEM_DATA_SELECTOR);
         attributeLayout.addView(rootView);
         setTogglesView(getToggles());
-    }
-
-    private TagGroup.OnTagClickListener mTagClickListener = new TagGroup.OnTagClickListener() {
-        @Override
-        public void onTagClick(String tag) {
-            selectedTags.add(tag);
-            value = Arrays.toString(selectedTags.toArray());
-        }
-    };
-
-    private List<String> getTagOptions() {
-        List<String> tagStringList = new ArrayList<>();
-        if (options != null) {
-            for (Option option : options) {
-                tagStringList.add(option.getLabel());
+        tagGroup.addOnTagSelectListener(new HashtagView.TagsSelectListener() {
+            @Override
+            public void onItemSelected(Object item, boolean selected) {
+                Option option = (Option) item;
+                if (selected) {
+                    option.setValue(true);
+                } else {
+                    option.setValue(false);
+                }
+                options.add(option);
+                value = Utils.convertToJSON(options);
+                Log.e(TAG, value);
             }
-        }
-        return tagStringList;
+        });
     }
+
 
     @Override
     public String getValue() {
-        this.value = Arrays.toString(selectedTags.toArray());
+        this.value = Utils.convertToJSON(options);
         return value;
     }
 
     @Override
     public void setValue(String value) {
-        selectedTags.add(value);
+//        selectedTags.add(value);
     }
 
     @Override
@@ -70,7 +64,7 @@ public class MultiSelectWidget extends BaseWidget {
 
     @Override
     public boolean isValid() {
-        if (min_limit > 0 && selectedTags.isEmpty())
+        if (min_limit > 0 && options.isEmpty())
             return false;
         else {
 

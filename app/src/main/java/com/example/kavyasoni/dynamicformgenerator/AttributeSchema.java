@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by kavyasoni on 28/10/15.
@@ -20,7 +21,7 @@ public class AttributeSchema {
     protected int min_limit;
     protected int max_limit;
     protected int view_type;
-    protected List<Option> options;
+    protected Set<Option> options;
 
     public Map<Integer, List<JsonObject>> getToggles() {
         return toggles;
@@ -106,23 +107,24 @@ public class AttributeSchema {
         this.view_type = view_type;
     }
 
-    public List<Option> getOptions() {
+    public Set<Option> getOptions() {
         return options;
     }
 
-    public void setOptions(List<Option> options) {
+    public void setOptions(Set<Option> options) {
         this.options = options;
     }
 
     public class Option {
-        private String id;
+        private int id;
         private String label;
+        private boolean value;
 
-        public String getId() {
+        public int getId() {
             return id;
         }
 
-        public void setId(String id) {
+        public void setId(int id) {
             this.id = id;
         }
 
@@ -132,6 +134,25 @@ public class AttributeSchema {
 
         public void setLabel(String label) {
             this.label = label;
+        }
+
+        public boolean isValue() {
+            return value;
+        }
+
+        public void setValue(boolean value) {
+            this.value = value;
+        }
+
+        @Override
+        public boolean equals(Object option) {
+            return ((Option)option).getId()==this.id;
+
+        }
+
+        @Override
+        public int hashCode() {
+            return this.id;
         }
     }
 
